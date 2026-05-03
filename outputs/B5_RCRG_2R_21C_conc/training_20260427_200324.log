@@ -1,0 +1,183 @@
+2026-04-27 20:03:24,739 [INFO] Device: cuda:0 | GPUs: 2 | Seed: 131 | Experiment: B5_RCRG_2R_21C_conc | Version: 1
+2026-04-27 20:03:24,740 [INFO] Experiment dir: experiments/B5_RCRG_2R_21C_conc_20260427_200324
+2026-04-27 20:03:28,931 [INFO] Train: 19368 samples | Val: 12069 samples
+2026-04-27 20:03:28,932 [INFO] Batch: 16 × 2 GPUs = 32 | Accum: 2
+2026-04-27 20:03:29,741 [INFO] Using nn.DataParallel on 2 GPUs
+2026-04-27 20:03:29,742 [INFO] Parameters: 2,384,904 trainable
+2026-04-27 20:03:29,743 [INFO] 
+Epoch 1/20
+2026-04-27 20:04:05,202 [INFO] Epoch 1/20 | Batch 50/606 | Loss: 0.9674 | Accuracy: 0.5150
+2026-04-27 20:04:37,329 [INFO] Epoch 1/20 | Batch 100/606 | Loss: 0.7900 | Accuracy: 0.6534
+2026-04-27 20:05:10,312 [INFO] Epoch 1/20 | Batch 150/606 | Loss: 0.4538 | Accuracy: 0.7163
+2026-04-27 20:05:42,577 [INFO] Epoch 1/20 | Batch 200/606 | Loss: 0.1923 | Accuracy: 0.7578
+2026-04-27 20:06:14,631 [INFO] Epoch 1/20 | Batch 250/606 | Loss: 0.1939 | Accuracy: 0.7791
+2026-04-27 20:06:46,737 [INFO] Epoch 1/20 | Batch 300/606 | Loss: 0.4201 | Accuracy: 0.7958
+2026-04-27 20:07:19,462 [INFO] Epoch 1/20 | Batch 350/606 | Loss: 0.2406 | Accuracy: 0.8129
+2026-04-27 20:07:51,542 [INFO] Epoch 1/20 | Batch 400/606 | Loss: 0.3063 | Accuracy: 0.8239
+2026-04-27 20:08:23,804 [INFO] Epoch 1/20 | Batch 450/606 | Loss: 0.2859 | Accuracy: 0.8344
+2026-04-27 20:08:56,010 [INFO] Epoch 1/20 | Batch 500/606 | Loss: 0.2019 | Accuracy: 0.8421
+2026-04-27 20:09:28,455 [INFO] Epoch 1/20 | Batch 550/606 | Loss: 0.1676 | Accuracy: 0.8497
+2026-04-27 20:10:00,843 [INFO] Epoch 1/20 | Batch 600/606 | Loss: 0.3476 | Accuracy: 0.8552
+2026-04-27 20:10:03,280 [INFO] Epoch 1/20 | Batch 606/606 | Loss: 0.1128 | Accuracy: 0.8558
+2026-04-27 20:14:51,599 [INFO] Validation - Epoch [1/20] | Loss: 0.6403 | Accuracy: 0.8156 | F1 Score: 0.8145
+2026-04-27 20:14:51,606 [INFO] Epoch 1 Train: Loss=0.4553 | Acc=0.86% — Val: Loss=0.6403 | Acc=0.82% | F1=0.8145 — lr: 0.000099
+2026-04-27 20:14:51,607 [INFO] New best val loss: 0.6403
+2026-04-27 20:14:51,954 [INFO] 
+Epoch 2/20
+2026-04-27 20:15:26,147 [INFO] Epoch 2/20 | Batch 50/606 | Loss: 0.5008 | Accuracy: 0.9256
+2026-04-27 20:15:57,847 [INFO] Epoch 2/20 | Batch 100/606 | Loss: 0.1618 | Accuracy: 0.9284
+2026-04-27 20:16:29,686 [INFO] Epoch 2/20 | Batch 150/606 | Loss: 0.0968 | Accuracy: 0.9308
+2026-04-27 20:17:02,269 [INFO] Epoch 2/20 | Batch 200/606 | Loss: 0.0621 | Accuracy: 0.9331
+2026-04-27 20:17:34,113 [INFO] Epoch 2/20 | Batch 250/606 | Loss: 0.1339 | Accuracy: 0.9361
+2026-04-27 20:18:05,659 [INFO] Epoch 2/20 | Batch 300/606 | Loss: 0.1039 | Accuracy: 0.9381
+2026-04-27 20:18:37,552 [INFO] Epoch 2/20 | Batch 350/606 | Loss: 0.3129 | Accuracy: 0.9400
+2026-04-27 20:19:09,890 [INFO] Epoch 2/20 | Batch 400/606 | Loss: 0.2630 | Accuracy: 0.9406
+2026-04-27 20:19:42,446 [INFO] Epoch 2/20 | Batch 450/606 | Loss: 0.0980 | Accuracy: 0.9415
+2026-04-27 20:20:13,711 [INFO] Epoch 2/20 | Batch 500/606 | Loss: 0.2760 | Accuracy: 0.9413
+2026-04-27 20:20:45,565 [INFO] Epoch 2/20 | Batch 550/606 | Loss: 0.0914 | Accuracy: 0.9428
+2026-04-27 20:21:16,929 [INFO] Epoch 2/20 | Batch 600/606 | Loss: 0.2442 | Accuracy: 0.9435
+2026-04-27 20:21:19,373 [INFO] Epoch 2/20 | Batch 606/606 | Loss: 0.3501 | Accuracy: 0.9437
+2026-04-27 20:26:07,518 [INFO] Validation - Epoch [2/20] | Loss: 0.6646 | Accuracy: 0.8098 | F1 Score: 0.8080
+2026-04-27 20:26:07,527 [INFO] Epoch 2 Train: Loss=0.1884 | Acc=0.94% — Val: Loss=0.6646 | Acc=0.81% | F1=0.8080 — lr: 0.000098
+2026-04-27 20:26:07,700 [INFO] 
+Epoch 3/20
+2026-04-27 20:26:42,259 [INFO] Epoch 3/20 | Batch 50/606 | Loss: 0.0301 | Accuracy: 0.9637
+2026-04-27 20:27:13,641 [INFO] Epoch 3/20 | Batch 100/606 | Loss: 0.1996 | Accuracy: 0.9625
+2026-04-27 20:27:45,348 [INFO] Epoch 3/20 | Batch 150/606 | Loss: 0.0529 | Accuracy: 0.9606
+2026-04-27 20:28:16,144 [INFO] Epoch 3/20 | Batch 200/606 | Loss: 0.0648 | Accuracy: 0.9620
+2026-04-27 20:28:47,108 [INFO] Epoch 3/20 | Batch 250/606 | Loss: 0.0342 | Accuracy: 0.9620
+2026-04-27 20:29:17,815 [INFO] Epoch 3/20 | Batch 300/606 | Loss: 0.1902 | Accuracy: 0.9608
+2026-04-27 20:29:49,139 [INFO] Epoch 3/20 | Batch 350/606 | Loss: 0.0598 | Accuracy: 0.9615
+2026-04-27 20:30:20,448 [INFO] Epoch 3/20 | Batch 400/606 | Loss: 0.1921 | Accuracy: 0.9619
+2026-04-27 20:30:52,120 [INFO] Epoch 3/20 | Batch 450/606 | Loss: 0.0614 | Accuracy: 0.9619
+2026-04-27 20:31:23,495 [INFO] Epoch 3/20 | Batch 500/606 | Loss: 0.0453 | Accuracy: 0.9620
+2026-04-27 20:31:55,138 [INFO] Epoch 3/20 | Batch 550/606 | Loss: 0.0350 | Accuracy: 0.9631
+2026-04-27 20:32:26,987 [INFO] Epoch 3/20 | Batch 600/606 | Loss: 0.2456 | Accuracy: 0.9634
+2026-04-27 20:32:29,412 [INFO] Epoch 3/20 | Batch 606/606 | Loss: 0.1147 | Accuracy: 0.9635
+2026-04-27 20:37:19,229 [INFO] Validation - Epoch [3/20] | Loss: 0.7525 | Accuracy: 0.7912 | F1 Score: 0.7907
+2026-04-27 20:37:19,238 [INFO] Epoch 3 Train: Loss=0.1212 | Acc=0.96% — Val: Loss=0.7525 | Acc=0.79% | F1=0.7907 — lr: 0.000095
+2026-04-27 20:37:19,426 [INFO] 
+Epoch 4/20
+2026-04-27 20:37:54,307 [INFO] Epoch 4/20 | Batch 50/606 | Loss: 0.1172 | Accuracy: 0.9688
+2026-04-27 20:38:26,675 [INFO] Epoch 4/20 | Batch 100/606 | Loss: 0.0870 | Accuracy: 0.9694
+2026-04-27 20:38:59,303 [INFO] Epoch 4/20 | Batch 150/606 | Loss: 0.0660 | Accuracy: 0.9698
+2026-04-27 20:39:31,410 [INFO] Epoch 4/20 | Batch 200/606 | Loss: 0.1262 | Accuracy: 0.9708
+2026-04-27 20:40:03,263 [INFO] Epoch 4/20 | Batch 250/606 | Loss: 0.0852 | Accuracy: 0.9705
+2026-04-27 20:40:35,103 [INFO] Epoch 4/20 | Batch 300/606 | Loss: 0.1006 | Accuracy: 0.9709
+2026-04-27 20:41:07,722 [INFO] Epoch 4/20 | Batch 350/606 | Loss: 0.0537 | Accuracy: 0.9712
+2026-04-27 20:41:40,789 [INFO] Epoch 4/20 | Batch 400/606 | Loss: 0.2465 | Accuracy: 0.9707
+2026-04-27 20:42:12,384 [INFO] Epoch 4/20 | Batch 450/606 | Loss: 0.0351 | Accuracy: 0.9714
+2026-04-27 20:42:43,707 [INFO] Epoch 4/20 | Batch 500/606 | Loss: 0.0314 | Accuracy: 0.9715
+2026-04-27 20:43:15,530 [INFO] Epoch 4/20 | Batch 550/606 | Loss: 0.0579 | Accuracy: 0.9719
+2026-04-27 20:43:47,858 [INFO] Epoch 4/20 | Batch 600/606 | Loss: 0.0433 | Accuracy: 0.9727
+2026-04-27 20:43:50,297 [INFO] Epoch 4/20 | Batch 606/606 | Loss: 0.0420 | Accuracy: 0.9728
+2026-04-27 20:48:40,180 [INFO] Validation - Epoch [4/20] | Loss: 0.6770 | Accuracy: 0.8150 | F1 Score: 0.8148
+2026-04-27 20:48:40,189 [INFO] Epoch 4 Train: Loss=0.0922 | Acc=0.97% — Val: Loss=0.6770 | Acc=0.81% | F1=0.8148 — lr: 0.000091
+2026-04-27 20:48:40,383 [INFO] 
+Epoch 5/20
+2026-04-27 20:49:17,036 [INFO] Epoch 5/20 | Batch 50/606 | Loss: 0.0500 | Accuracy: 0.9806
+2026-04-27 20:49:49,455 [INFO] Epoch 5/20 | Batch 100/606 | Loss: 0.0475 | Accuracy: 0.9831
+2026-04-27 20:50:21,929 [INFO] Epoch 5/20 | Batch 150/606 | Loss: 0.0868 | Accuracy: 0.9842
+2026-04-27 20:50:54,434 [INFO] Epoch 5/20 | Batch 200/606 | Loss: 0.0472 | Accuracy: 0.9848
+2026-04-27 20:51:26,455 [INFO] Epoch 5/20 | Batch 250/606 | Loss: 0.0124 | Accuracy: 0.9845
+2026-04-27 20:51:58,747 [INFO] Epoch 5/20 | Batch 300/606 | Loss: 0.1169 | Accuracy: 0.9840
+2026-04-27 20:52:32,167 [INFO] Epoch 5/20 | Batch 350/606 | Loss: 0.0725 | Accuracy: 0.9831
+2026-04-27 20:53:04,533 [INFO] Epoch 5/20 | Batch 400/606 | Loss: 0.0203 | Accuracy: 0.9831
+2026-04-27 20:53:37,013 [INFO] Epoch 5/20 | Batch 450/606 | Loss: 0.0924 | Accuracy: 0.9837
+2026-04-27 20:54:09,807 [INFO] Epoch 5/20 | Batch 500/606 | Loss: 0.0338 | Accuracy: 0.9828
+2026-04-27 20:54:42,564 [INFO] Epoch 5/20 | Batch 550/606 | Loss: 0.0637 | Accuracy: 0.9824
+2026-04-27 20:55:14,822 [INFO] Epoch 5/20 | Batch 600/606 | Loss: 0.0563 | Accuracy: 0.9822
+2026-04-27 20:55:17,243 [INFO] Epoch 5/20 | Batch 606/606 | Loss: 0.0508 | Accuracy: 0.9823
+2026-04-27 21:00:09,971 [INFO] Validation - Epoch [5/20] | Loss: 0.7354 | Accuracy: 0.8064 | F1 Score: 0.8074
+2026-04-27 21:00:09,980 [INFO] Epoch 5 Train: Loss=0.0637 | Acc=0.98% — Val: Loss=0.7354 | Acc=0.81% | F1=0.8074 — lr: 0.000086
+2026-04-27 21:00:10,154 [INFO] 
+Epoch 6/20
+2026-04-27 21:00:46,962 [INFO] Epoch 6/20 | Batch 50/606 | Loss: 0.0548 | Accuracy: 0.9794
+2026-04-27 21:01:18,595 [INFO] Epoch 6/20 | Batch 100/606 | Loss: 0.0100 | Accuracy: 0.9831
+2026-04-27 21:01:50,892 [INFO] Epoch 6/20 | Batch 150/606 | Loss: 0.0129 | Accuracy: 0.9850
+2026-04-27 21:02:22,244 [INFO] Epoch 6/20 | Batch 200/606 | Loss: 0.0328 | Accuracy: 0.9859
+2026-04-27 21:02:54,644 [INFO] Epoch 6/20 | Batch 250/606 | Loss: 0.0491 | Accuracy: 0.9856
+2026-04-27 21:03:26,170 [INFO] Epoch 6/20 | Batch 300/606 | Loss: 0.0660 | Accuracy: 0.9853
+2026-04-27 21:03:58,628 [INFO] Epoch 6/20 | Batch 350/606 | Loss: 0.0822 | Accuracy: 0.9854
+2026-04-27 21:04:31,010 [INFO] Epoch 6/20 | Batch 400/606 | Loss: 0.0049 | Accuracy: 0.9855
+2026-04-27 21:05:03,086 [INFO] Epoch 6/20 | Batch 450/606 | Loss: 0.1196 | Accuracy: 0.9849
+2026-04-27 21:05:35,116 [INFO] Epoch 6/20 | Batch 500/606 | Loss: 0.0879 | Accuracy: 0.9847
+2026-04-27 21:06:07,331 [INFO] Epoch 6/20 | Batch 550/606 | Loss: 0.0138 | Accuracy: 0.9844
+2026-04-27 21:06:38,526 [INFO] Epoch 6/20 | Batch 600/606 | Loss: 0.0418 | Accuracy: 0.9846
+2026-04-27 21:06:41,281 [INFO] Epoch 6/20 | Batch 606/606 | Loss: 0.3048 | Accuracy: 0.9847
+2026-04-27 21:11:30,592 [INFO] Validation - Epoch [6/20] | Loss: 0.7853 | Accuracy: 0.8062 | F1 Score: 0.8067
+2026-04-27 21:11:30,600 [INFO] Epoch 6 Train: Loss=0.0530 | Acc=0.98% — Val: Loss=0.7853 | Acc=0.81% | F1=0.8067 — lr: 0.000080
+2026-04-27 21:11:30,771 [INFO] 
+Epoch 7/20
+2026-04-27 21:12:06,222 [INFO] Epoch 7/20 | Batch 50/606 | Loss: 0.0574 | Accuracy: 0.9881
+2026-04-27 21:12:37,719 [INFO] Epoch 7/20 | Batch 100/606 | Loss: 0.0157 | Accuracy: 0.9884
+2026-04-27 21:13:09,894 [INFO] Epoch 7/20 | Batch 150/606 | Loss: 0.0113 | Accuracy: 0.9877
+2026-04-27 21:13:41,451 [INFO] Epoch 7/20 | Batch 200/606 | Loss: 0.0094 | Accuracy: 0.9869
+2026-04-27 21:14:13,405 [INFO] Epoch 7/20 | Batch 250/606 | Loss: 0.0542 | Accuracy: 0.9864
+2026-04-27 21:14:45,419 [INFO] Epoch 7/20 | Batch 300/606 | Loss: 0.0145 | Accuracy: 0.9859
+2026-04-27 21:15:17,980 [INFO] Epoch 7/20 | Batch 350/606 | Loss: 0.0062 | Accuracy: 0.9863
+2026-04-27 21:15:50,495 [INFO] Epoch 7/20 | Batch 400/606 | Loss: 0.0650 | Accuracy: 0.9861
+2026-04-27 21:16:23,738 [INFO] Epoch 7/20 | Batch 450/606 | Loss: 0.0120 | Accuracy: 0.9860
+2026-04-27 21:16:57,343 [INFO] Epoch 7/20 | Batch 500/606 | Loss: 0.0282 | Accuracy: 0.9859
+2026-04-27 21:17:30,533 [INFO] Epoch 7/20 | Batch 550/606 | Loss: 0.0128 | Accuracy: 0.9862
+2026-04-27 21:18:02,980 [INFO] Epoch 7/20 | Batch 600/606 | Loss: 0.0135 | Accuracy: 0.9865
+2026-04-27 21:18:05,438 [INFO] Epoch 7/20 | Batch 606/606 | Loss: 0.1164 | Accuracy: 0.9864
+2026-04-27 21:22:57,582 [INFO] Validation - Epoch [7/20] | Loss: 0.9118 | Accuracy: 0.7887 | F1 Score: 0.7850
+2026-04-27 21:22:57,591 [INFO] Epoch 7 Train: Loss=0.0434 | Acc=0.99% — Val: Loss=0.9118 | Acc=0.79% | F1=0.7850 — lr: 0.000073
+2026-04-27 21:22:57,779 [INFO] 
+Epoch 8/20
+2026-04-27 21:23:33,698 [INFO] Epoch 8/20 | Batch 50/606 | Loss: 0.0037 | Accuracy: 0.9919
+2026-04-27 21:24:06,581 [INFO] Epoch 8/20 | Batch 100/606 | Loss: 0.0852 | Accuracy: 0.9903
+2026-04-27 21:24:39,165 [INFO] Epoch 8/20 | Batch 150/606 | Loss: 0.0239 | Accuracy: 0.9902
+2026-04-27 21:25:11,066 [INFO] Epoch 8/20 | Batch 200/606 | Loss: 0.0039 | Accuracy: 0.9909
+2026-04-27 21:25:44,523 [INFO] Epoch 8/20 | Batch 250/606 | Loss: 0.0455 | Accuracy: 0.9912
+2026-04-27 21:26:17,224 [INFO] Epoch 8/20 | Batch 300/606 | Loss: 0.0278 | Accuracy: 0.9908
+2026-04-27 21:26:51,261 [INFO] Epoch 8/20 | Batch 350/606 | Loss: 0.0146 | Accuracy: 0.9905
+2026-04-27 21:27:23,436 [INFO] Epoch 8/20 | Batch 400/606 | Loss: 0.0487 | Accuracy: 0.9911
+2026-04-27 21:27:55,424 [INFO] Epoch 8/20 | Batch 450/606 | Loss: 0.0894 | Accuracy: 0.9912
+2026-04-27 21:28:28,628 [INFO] Epoch 8/20 | Batch 500/606 | Loss: 0.0376 | Accuracy: 0.9909
+2026-04-27 21:29:02,039 [INFO] Epoch 8/20 | Batch 550/606 | Loss: 0.0020 | Accuracy: 0.9910
+2026-04-27 21:29:34,262 [INFO] Epoch 8/20 | Batch 600/606 | Loss: 0.0384 | Accuracy: 0.9909
+2026-04-27 21:29:36,813 [INFO] Epoch 8/20 | Batch 606/606 | Loss: 0.1714 | Accuracy: 0.9909
+2026-04-27 21:34:28,356 [INFO] Validation - Epoch [8/20] | Loss: 0.7664 | Accuracy: 0.8267 | F1 Score: 0.8275
+2026-04-27 21:34:28,367 [INFO] Epoch 8 Train: Loss=0.0322 | Acc=0.99% — Val: Loss=0.7664 | Acc=0.83% | F1=0.8275 — lr: 0.000066
+2026-04-27 21:34:28,551 [INFO] 
+Epoch 9/20
+2026-04-27 21:35:05,747 [INFO] Epoch 9/20 | Batch 50/606 | Loss: 0.0318 | Accuracy: 0.9931
+2026-04-27 21:35:37,867 [INFO] Epoch 9/20 | Batch 100/606 | Loss: 0.0059 | Accuracy: 0.9916
+2026-04-27 21:36:11,437 [INFO] Epoch 9/20 | Batch 150/606 | Loss: 0.0426 | Accuracy: 0.9912
+2026-04-27 21:36:43,772 [INFO] Epoch 9/20 | Batch 200/606 | Loss: 0.0378 | Accuracy: 0.9912
+2026-04-27 21:37:16,467 [INFO] Epoch 9/20 | Batch 250/606 | Loss: 0.0103 | Accuracy: 0.9918
+2026-04-27 21:37:48,899 [INFO] Epoch 9/20 | Batch 300/606 | Loss: 0.0866 | Accuracy: 0.9911
+2026-04-27 21:38:22,096 [INFO] Epoch 9/20 | Batch 350/606 | Loss: 0.0100 | Accuracy: 0.9913
+2026-04-27 21:38:55,119 [INFO] Epoch 9/20 | Batch 400/606 | Loss: 0.0412 | Accuracy: 0.9915
+2026-04-27 21:39:29,501 [INFO] Epoch 9/20 | Batch 450/606 | Loss: 0.0190 | Accuracy: 0.9922
+2026-04-27 21:40:02,215 [INFO] Epoch 9/20 | Batch 500/606 | Loss: 0.0217 | Accuracy: 0.9921
+2026-04-27 21:40:35,745 [INFO] Epoch 9/20 | Batch 550/606 | Loss: 0.0195 | Accuracy: 0.9919
+2026-04-27 21:41:08,920 [INFO] Epoch 9/20 | Batch 600/606 | Loss: 0.0070 | Accuracy: 0.9922
+2026-04-27 21:41:11,679 [INFO] Epoch 9/20 | Batch 606/606 | Loss: 0.4561 | Accuracy: 0.9921
+2026-04-27 21:46:05,432 [INFO] Validation - Epoch [9/20] | Loss: 0.7027 | Accuracy: 0.8343 | F1 Score: 0.8351
+2026-04-27 21:46:05,445 [INFO] Epoch 9 Train: Loss=0.0300 | Acc=0.99% — Val: Loss=0.7027 | Acc=0.83% | F1=0.8351 — lr: 0.000058
+2026-04-27 21:46:05,622 [INFO] 
+Epoch 10/20
+2026-04-27 21:46:42,383 [INFO] Epoch 10/20 | Batch 50/606 | Loss: 0.0062 | Accuracy: 0.9950
+2026-04-27 21:47:15,783 [INFO] Epoch 10/20 | Batch 100/606 | Loss: 0.0032 | Accuracy: 0.9956
+2026-04-27 21:47:49,021 [INFO] Epoch 10/20 | Batch 150/606 | Loss: 0.0080 | Accuracy: 0.9952
+2026-04-27 21:48:21,370 [INFO] Epoch 10/20 | Batch 200/606 | Loss: 0.0076 | Accuracy: 0.9948
+2026-04-27 21:48:54,407 [INFO] Epoch 10/20 | Batch 250/606 | Loss: 0.0075 | Accuracy: 0.9942
+2026-04-27 21:49:26,834 [INFO] Epoch 10/20 | Batch 300/606 | Loss: 0.0085 | Accuracy: 0.9941
+2026-04-27 21:49:59,208 [INFO] Epoch 10/20 | Batch 350/606 | Loss: 0.0118 | Accuracy: 0.9942
+2026-04-27 21:50:32,497 [INFO] Epoch 10/20 | Batch 400/606 | Loss: 0.0113 | Accuracy: 0.9945
+2026-04-27 21:51:05,510 [INFO] Epoch 10/20 | Batch 450/606 | Loss: 0.0686 | Accuracy: 0.9939
+2026-04-27 21:51:38,216 [INFO] Epoch 10/20 | Batch 500/606 | Loss: 0.0110 | Accuracy: 0.9938
+2026-04-27 21:52:11,839 [INFO] Epoch 10/20 | Batch 550/606 | Loss: 0.0244 | Accuracy: 0.9938
+2026-04-27 21:52:44,280 [INFO] Epoch 10/20 | Batch 600/606 | Loss: 0.0135 | Accuracy: 0.9940
+2026-04-27 21:52:46,768 [INFO] Epoch 10/20 | Batch 606/606 | Loss: 0.0173 | Accuracy: 0.9940
+2026-04-27 21:57:38,548 [INFO] Validation - Epoch [10/20] | Loss: 0.7918 | Accuracy: 0.8176 | F1 Score: 0.8153
+2026-04-27 21:57:38,562 [INFO] Epoch 10 Train: Loss=0.0239 | Acc=0.99% — Val: Loss=0.7918 | Acc=0.82% | F1=0.8153 — lr: 0.000051
+2026-04-27 21:57:38,734 [INFO] 
+Epoch 11/20
+2026-04-27 21:58:15,320 [INFO] Epoch 11/20 | Batch 50/606 | Loss: 0.0022 | Accuracy: 0.9956
+2026-04-27 21:58:47,170 [INFO] Epoch 11/20 | Batch 100/606 | Loss: 0.1096 | Accuracy: 0.9956
+2026-04-27 21:59:19,829 [INFO] Epoch 11/20 | Batch 150/606 | Loss: 0.0233 | Accuracy: 0.9950
+2026-04-27 21:59:52,658 [INFO] Epoch 11/20 | Batch 200/606 | Loss: 0.0078 | Accuracy: 0.9945
