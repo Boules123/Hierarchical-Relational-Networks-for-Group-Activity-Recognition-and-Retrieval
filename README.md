@@ -3,7 +3,7 @@
 <div align="center">
 
 <!-- Replace with your actual banner image -->
-![Project Banner]("G:\AI\MACHINE L\projects\Image Caption Generator\Projects for CV\OUR RESUME\machine learning\(NEW)hierarchical relational networks for group activity recognition and retrieval\imgs\Screenshot 2026-05-04 020227_4.png")
+![Project Banner](imgs/Screenshot%202026-05-04%20020227_4.png)
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -45,6 +45,9 @@ A comprehensive ablation study covers **9 non-temporal baselines** and **2 tempo
     - [Player Action Labels](#player-action-labels)
   - [Ablation Study](#ablation-study)
     - [Single-Frame Baselines](#single-frame-baselines)
+      - [Baseline Descriptions](#baseline-descriptions)
+      - [Performance Table](#performance-table)
+      - [Baseline Comparison Visualizations](#baseline-comparison-visualizations)
     - [Temporal Models](#temporal-models)
     - [Per-Class Results — Best Model (`RCRG-2R-21C-conc`)](#per-class-results--best-model-rcrg-2r-21c-conc)
   - [Citation](#citation)
@@ -56,9 +59,8 @@ A comprehensive ablation study covers **9 non-temporal baselines** and **2 tempo
 
 Traditional pooling methods reduce a set of person features to a single scene vector, but lose the spatial and relational structure between players. The **Hierarchical Relational Network (HRN)** addresses this with a relational layer that constructs a graph over all detected persons and propagates pairwise relationship information across stacked layers.
 
-<!-- Replace with your architecture diagram (e.g., exported from draw.io or a paper figure) -->
 <div align="center">
-  <img src="imgs\Screenshot 2026-05-04 012044_1.png" alt="Qualitative Results" alt="Architecture Diagram" width="800"/>
+  <img src="imgs/Screenshot%202026-05-04%20012044_1.png" alt="Architecture Diagram" width="800"/>
   <br><em>Architecture Diagram: Hierarchical Relational Layers.</em>
 </div>
 
@@ -82,9 +84,8 @@ $$P_i^\ell = \sum_{j \in E_i^\ell} F^\ell\!\left(P_i^{\ell-1} \oplus P_j^{\ell-1
 
 where $\oplus$ is concatenation and $F^\ell$ is a shared 2-layer MLP.
 
-<!-- Replace with a diagram showing the relational update mechanism -->
 <div align="center">
-  <img src="imgs\Screenshot 2026-05-04 015317_2.png" alt="Relational Layer" width="700"/>
+  <img src="imgs/Screenshot%202026-05-04%20015317_2.png" alt="Relational Layer" width="700"/>
   <br><em>Pairwise relational update: each node aggregates messages from all neighbors via a shared MLP.</em>
 </div>
 
@@ -142,9 +143,9 @@ pip install -r requirements.txt
 Set `data_dir` and `annot_dir` in the relevant YAML config (e.g. `configs/Person_Classifier.yml`).  
 The dataset is sourced from publicly available volleyball videos; see the [original authors' repository](https://github.com/mostafa-saad/deep-activity-rec) for download instructions.
 
-<!-- Replace with a screenshot of your dataset directory structure or a sample annotated frame -->
+<!-- Dataset sample frame -->
 <div align="center">
-  <img src="imgs\Screenshot 2026-05-04 015539_3.png" alt="Dataset Sample" width="700"/>
+  <img src="imgs/Screenshot%202026-05-04%20015539_3.png" alt="Dataset Sample" width="700"/>
   <br><em>Example annotated frame from the Volleyball dataset showing player bounding boxes and action labels.</em>
 </div>
 
@@ -213,6 +214,28 @@ All models use a ResNet-50 backbone (weights from Stage 1) with all backbone par
 
 ### Single-Frame Baselines
 
+#### Baseline Descriptions
+
+- **B1-NoRelations**: Simple CNN + pooling baseline with no relational layer. Uses ResNet-50 features directly pooled per team via max-pooling to scene vector, passed through a shared FC layer (128 dims). Establishes lower bound without relational reasoning.
+
+- **B2-RCRG-1R-1C**: Single relational layer over a complete clique (all players). Reduces 2048 dims to 128. Shows the benefit of one layer of pairwise interactions without hierarchical depth.
+
+- **B3-RCRG-1R-1C-notTuned**: Identical to B2 but uses vanilla ResNet-50 (not fine-tuned in Stage 1). Demonstrates how critical backbone fine-tuning is (~10% accuracy drop), validating the two-stage training strategy.
+
+- **B4-RCRG-2R-11C**: Two relational layers, each over a single complete clique (1C means 1 clique per layer). First layer reduces 2048→256, second reduces 256→128. Tests hierarchical depth with uniform clique structure.
+
+- **B4-RCRG-2R-11C-conc**: Same architecture as B4 but replaces max-pooling per team with concatenation of all person features as the final scene representation. Shows the effect of aggregation strategy.
+
+- **B5-RCRG-2R-21C**: Two relational layers with hierarchical clique structure (2C then 1C). First layer processes team-level cliques (2C = left & right team separately), second layer bridges across all players (1C = full clique). Enables intra-team then cross-team reasoning.
+
+- **B5-RCRG-2R-21C-conc**: Same as B5 but with concatenation pooling. Tests hierarchical cliques with alternative aggregation.
+
+- **B6-RCRG-3R-421C** (Best single-frame): Three relational layers with multi-scale cliques (4C→2C→1C). First layer uses 4 cliques, second uses 2, third uses 1. Progressively refines relational context through increasing receptive fields. Achieves best single-frame performance (87.43% acc).
+
+- **B6-RCRG-3R-421C-conc**: Same as B6 with concatenation pooling.
+
+#### Performance Table
+
 | Model | Architecture | Pooling | Val Acc | Val F1 |
 |-------|-------------|---------|---------|--------|
 | **B1-NoRelations** | ResNet-50 → shared linear 128 | max per team | 86.63% | 0.8656 |
@@ -229,6 +252,44 @@ All models use a ResNet-50 backbone (weights from Stage 1) with all backbone par
 > - `-conc` suffix: final scene representation uses concatenation of all person features instead of max-pooling per team.
 > - B3 demonstrates the impact of fine-tuning — dropping backbone fine-tuning causes a ~10% accuracy regression.
 > - B6's 3-layer hierarchical clique structure (4→2→1) achieves the best single-frame result.
+
+#### Baseline Comparison Visualizations
+
+<div align="center">
+  <h5>B1 - NoRelations (Baseline)</h5>
+  <img src="outputs/B1_NoRelations/confusion_matrix%20(1).png" alt="B1 Confusion Matrix" width="500"/>
+  <p><em>Acc: 86.63% | F1: 0.8656 — Simple pooling, no relational reasoning</em></p>
+</div>
+
+<div align="center">
+  <h5>B2 - RCRG-1R-1C (Single Relational Layer)</h5>
+  <img src="outputs/B2_RCRG_1R_1C/confusion_matrix%20(1).png" alt="B2 Confusion Matrix" width="500"/>
+  <p><em>Acc: 86.06% | F1: 0.8599 — One layer over complete clique</em></p>
+</div>
+
+<div align="center">
+  <h5>B3 - RCRG-1R-1C-notTuned (No Backbone Fine-tuning)</h5>
+  <img src="outputs/B3_RCRG_1R_1C_notTuned/confusion_matrix%20(1).png" alt="B3 Confusion Matrix" width="500"/>
+  <p><em>Acc: 76.10% | F1: 0.7623 — Demonstrates ~10% drop without fine-tuning</em></p>
+</div>
+
+<div align="center">
+  <h5>B4 - RCRG-2R-11C (Two Layers, Uniform Cliques)</h5>
+  <img src="outputs/B4_RCRG_2R_11C/confusion_matrix%20(1).png" alt="B4 Confusion Matrix" width="500"/>
+  <p><em>Acc: 85.44% | F1: 0.8532 — Hierarchical depth with same clique structure</em></p>
+</div>
+
+<div align="center">
+  <h5>B5 - RCRG-2R-21C (Two Layers, Hierarchical Cliques)</h5>
+  <img src="outputs/B5_RCRG_2R_21C/confusion_matrix%20(1).png" alt="B5 Confusion Matrix" width="500"/>
+  <p><em>Acc: 86.89% | F1: 0.8675 — Team-level then cross-team reasoning</em></p>
+</div>
+
+<div align="center">
+  <h5>B6 - RCRG-3R-421C ⭐ Best Single-Frame</h5>
+  <img src="outputs/B6_RCRG_3R_421C/confusion_matrix%20(1).png" alt="B6 Confusion Matrix" width="500"/>
+  <p><em>Acc: 87.43% | F1: 0.8743 — Three layers with multi-scale cliques (4→2→1)</em></p>
+</div>
 
 ### Temporal Models
 
@@ -254,10 +315,10 @@ Temporal models process a 9-frame clip per person through an LSTM (hidden_size=5
 | l-spike | 0.96 | 0.88 | 0.92 |
 | l_set | 0.86 | 0.87 | 0.87 |
 
-<!-- Replace with your confusion matrix image -->
+<!-- Best model confusion matrix -->
 <div align="center">
-  <img src="imgs\confusion_matrix (1).png" alt="Confusion Matrix" width="600"/>
-  <br><em>confusion matrix for the best model (RCRG-2R-21C-conc).</em>
+  <img src="outputs/temporal/RCRG_2R_21C_conc/confusion_matrix%20(1).png" alt="Confusion Matrix" width="600"/>
+  <br><em>Confusion matrix for the best temporal model (RCRG-2R-21C-conc).</em>
 </div>
 
 ---
