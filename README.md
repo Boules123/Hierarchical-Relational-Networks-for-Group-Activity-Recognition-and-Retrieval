@@ -128,8 +128,8 @@ Multiple relational layers are stacked to progressively compress features while 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/Boules123/Relational-Networks-and-Retrieval.git
+cd Relational-Networks-and-Retrieval
 ```
 
 ### 2. Install Dependencies
